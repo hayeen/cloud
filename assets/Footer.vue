@@ -20,12 +20,12 @@
     </div>
 
     <div class="project-links">
-      <strong>项目:</strong><a href="https://github.com/willow-god/FlareDrive-R2" target="_blank"
-        rel="noopener noreferrer">FlareDrive-R2</a>
-      <strong>作者:</strong><a href="https://github.com/willow-god" target="_blank"
-        rel="noopener noreferrer">LiuShen</a>
+      <strong>项目:</strong><a href="https://we3.vip" target="_blank"
+        rel="noopener noreferrer">翼梦耀世</a>
+      <strong>作者:</strong><a href="https://mizean.com/" target="_blank"
+        rel="noopener noreferrer">觅赞科技</a>
       <strong>初始项目:</strong><a href="https://github.com/ljxi/Cloudflare-R2-oss" target="_blank"
-        rel="noopener noreferrer">Cloudflare-R2-OSS</a>
+        rel="noopener noreferrer">Cloudflare-R2</a>
     </div>
 
     <div class="powered">Powered by <a href="https://workers.cloudflare.com/" target="_blank"
@@ -40,10 +40,10 @@ export default {
   name: "Footer",
   data() {
     return {
-      homeUrl: "https://www.liushen.fun/",
-      blogUrl: "https://blog.liushen.fun/",
+      homeUrl: "https://www.we3.vip/",
+      blogUrl: "https://hayeen.com/",
       githubUrl: "https://github.com/willow-god",
-      emailUrl: "mailto:01@liushen.fun"
+      emailUrl: "mailto:hayeen@qq.com"
     };
   }
 };
