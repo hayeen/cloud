@@ -597,7 +597,7 @@ export default {
         }
         document.title = this.cwd.replace(/.*\/(?!$)|\//g, "") === "/" 
             ? "FlareDrive-R2 - 优雅的 Cloudflare R2 网盘文件库"
-            :`${this.cwd.replace(/.*\/(?!$)|\//g, "") || "/" } - hayeen的网盘`;
+            :`${this.cwd.replace(/.*\/(?!$)|\//g, "") || "/" } hayeen的私人网盘`;
       },
       immediate: true,
     },
