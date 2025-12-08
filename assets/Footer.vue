@@ -21,17 +21,17 @@
 
     <div class="project-links">
       <strong>项目:</strong><a href="https://we3.vip" target="_blank"
-        rel="noopener noreferrer">翼梦耀世</a>
+        rel="noopener noreferrer">线上网盘</a>
       <strong>作者:</strong><a href="https://mizean.com/" target="_blank"
         rel="noopener noreferrer">觅赞科技</a>
       <strong>初始项目:</strong><a href="https://github.com/ljxi/Cloudflare-R2-oss" target="_blank"
         rel="noopener noreferrer">Cloudflare-R2</a>
     </div>
 
-    <div class="powered">Powered by <a href="https://workers.cloudflare.com/" target="_blank"
+    <div class="powered">Powered by <a href="https://mizean.com/" target="_blank"
         rel="noopener noreferrer">Cloudflare Workers</a></div>
 
-    <div style="margin:10px 0;">© 2025 FlareDrive. All rights reserved.</div>
+    <div style="margin:10px 0;">© 2025 mizean.com All rights reserved.</div>
   </footer>
 </template>
 
@@ -42,7 +42,7 @@ export default {
     return {
       homeUrl: "https://www.we3.vip/",
       blogUrl: "https://hayeen.com/",
-      githubUrl: "https://github.com/willow-god",
+      githubUrl: "https://github.com/hayeen",
       emailUrl: "mailto:hayeen@qq.com"
     };
   }
