@@ -1,6 +1,6 @@
 import { notFound, parseBucketPath } from "@/utils/bucket";
 
-const PUBLIC_IMAGE_PREFIX = "pictrure/";
+const PUBLIC_IMAGE_PREFIX = "Picture/";
 
 const IMAGE_EXTENSION = /\.(jpg|jpeg|png|gif|webp|avif)$/i;
 
