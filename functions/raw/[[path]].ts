@@ -1,14 +1,10 @@
 import { notFound, parseBucketPath } from "@/utils/bucket";
-
 const PUBLIC_IMAGE_PREFIX = "Picture/";
-
 const IMAGE_EXTENSION = /\.(jpg|jpeg|png|gif|webp|avif)$/i;
-
 function allowExternalImage(context, path: string): boolean {
   // 仅开放指定目录里的图片
   if (!path.startsWith(PUBLIC_IMAGE_PREFIX)) return false;
   if (!IMAGE_EXTENSION.test(path)) return false;
-
   // 读取允许的网站域名
   const allowedHosts = String(
     context.env.IMAGE_HOTLINK_HOSTS || ""
@@ -16,14 +12,12 @@ function allowExternalImage(context, path: string): boolean {
     .split(",")
     .map((host) => host.trim().toLowerCase())
     .filter(Boolean);
-
   // 检查图片请求的来源页面
   const referer = context.request.headers.get("Referer");
   if (!referer) return false;
 
   try {
     const source = new URL(referer);
-
     return (
       source.protocol === "https:" &&
       allowedHosts.includes(source.hostname.toLowerCase())
@@ -32,9 +26,7 @@ function allowExternalImage(context, path: string): boolean {
     return false;
   }
 }
-
 import { can_access_path } from "@/utils/auth";
-
 export async function onRequestGet(context) {
   const [bucket, path] = parseBucketPath(context);
   if (!bucket) return notFound();
@@ -54,13 +46,10 @@ if (
     method: context.request.method,
     redirect: "follow",
 }))
-
-
   const headers = new Headers(response.headers);
   if (path.startsWith("_$flaredrive$/thumbnails/")){
     headers.set("Cache-Control", "max-age=31536000");
   }
-
   return new Response(response.body, {
     headers: headers,
     status: response.status,
