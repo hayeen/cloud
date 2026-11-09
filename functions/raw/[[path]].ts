@@ -38,7 +38,10 @@ import { can_access_path } from "@/utils/auth";
 export async function onRequestGet(context) {
   const [bucket, path] = parseBucketPath(context);
   if (!bucket) return notFound();
-  if (!can_access_path(context, path || "")) {
+if (
+  !can_access_path(context, path || "") &&
+  !allowExternalImage(context, path || "")
+) {
     const headers = new Headers();
     headers.set("WWW-Authenticate", 'Basic realm="需要登录"');
     return new Response("没有读取权限", { status: 401, headers });
